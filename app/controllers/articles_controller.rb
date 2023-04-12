@@ -10,6 +10,10 @@ class ArticlesController < ApplicationController
     @articles = Article.paginate(page: params[:page], per_page: 5)
   end
 
+  def search
+    @articles = Article.where("title LIKE ?", "%" + params[:q] + "%")
+  end
+
   def new
     @article = Article.new
   end
