@@ -139,6 +139,8 @@ GEM
       racc (~> 1.4)
     nokogiri (1.14.1-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.14.1-x86_64-linux)
+      racc (~> 1.4)
     popper_js (2.11.6)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -200,6 +202,7 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.6.0-x64-mingw-ucrt)
     sqlite3 (1.6.0-x86_64-darwin)
+    sqlite3 (1.6.0-x86_64-linux)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
     thor (1.2.1)
@@ -234,6 +237,7 @@ GEM
 PLATFORMS
   x64-mingw-ucrt
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
