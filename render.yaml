@@ -16,6 +16,6 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-  - type: Redis
-    name: Redis
+  - type: redis
+    name: redis
     plan: free
