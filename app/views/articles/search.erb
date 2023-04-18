@@ -1,3 +1,7 @@
 <h1 class="text-center mt-4">Search Results</h1>
 
-<%= render @articles %>
+<%# <%= render @articles %>
+
+<% @articles.each do |article| %>
+    <%= render "article", article: article %>
+<% end %>

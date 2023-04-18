@@ -11,7 +11,9 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    @articles = Article.where("title LIKE ?", "%" + params[:q] + "%")
+    @articles = Article.left_outer_joins(article_categories: :category).where("title LIKE ?", "%" + params[:q] + "%").or(
+      Article.where("description LIKE ?", "%" + params[:q] + "%")
+    ).or(Category.where("name LIKE ?", "%" + params[:q] + "%")).distinct
   end
 
   def new
