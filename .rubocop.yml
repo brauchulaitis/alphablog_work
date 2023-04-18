@@ -1,0 +1,115 @@
+require: rubocop-rails
+
+AllCops:
+  SuggestExtensions: false
+  EnabledByDefault: true
+  DisplayCopNames: true
+  TargetRubyVersion: 3.1
+  TargetRailsVersion: 7.0
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - config.ru
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Metrics:
+  Severity: refactor
+
+Layout/LineLength:
+  Severity: convention
+  Max: 140
+  AllowedPatterns: ['\A#']
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  Exclude:
+    - 'spec/**/*'
+    - 'Rakefile'
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/DocumentationMethod:
+  Enabled: false
+
+Lint/ConstantResolution:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Bundler/GemVersion:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+
+Style/Copyright:
+  Enabled: false
+
+Layout/MultilineAssignmentLayout:
+  EnforcedStyle: same_line
+
+Style/ConstantVisibility:
+  Enabled: false
+
+Style/MissingElse:
+  Enabled: false
+
+Bundler/GemComment:
+  Enabled: false
+
+Style/DisableCopsWithinSourceCodeDirective:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/AbcSize:
+  Max: 20
+
+Style/OpenStructUse:
+  Enabled: false
+
+Layout/SingleLineBlockChain:
+  Enabled: false
+
+Layout/RedundantLineBreak:
+  Enabled: false
+
+Style/StringHashKeys:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Rails/SchemaComment:
+  Enabled: false
